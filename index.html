@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="2021年度总结">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="transparent" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-fullscreen" content="true">
+    <meta name=”x5-page-mode” content=”app”>
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <meta name="HandheldFriendly" content=”true”>
+    <script
+        language="JavaScript"> if (document.all) { window.resizeTo(screen.availWidth, screen.availHeight); } </script>
+    <title>2021年度总结</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link href="./css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+
+
+    <div class="page_box">
+        <audio src="./2.mp3" controls="controls" loop="true" hidden="true" id="start" type="audio/mpeg"
+            autoplay="autoplay"></audio>
+        <!-- <div class="logo"></div> -->
+        <!-- <header class="h5-header">
+        <div>返回</div>
+        <div class="h5-header-center">2021年度总结</div>
+        <div></div>
+    </header> -->
+        <!-- 第一页 -->
+        <div class="page page1">
+            <div class="page-top"></div>
+            <div class="page-content page-content1">
+                <p class="page1-content-text page-content-text">时光总在不经意间流逝</p>
+                <p class="page1-content-text page-content-text">2021，一起走过的路</p>
+                <p class="page1-content-text page-content-text">你也许忘了，但我们记得……</p>
+            </div>
+            <div class="page-right page1-right"></div>
+
+            <input class="page1-bottom-text" id="user_id" placeholder="请输入你的员工号">
+            <button class="page1-bottom-text-r" type="submit" id="btn_sub">点击查看</button>
+            <div id="preload-01" class="cotent cotent1"></div>
+        </div>
+
+        <!-- 第二页 -->
+        <div class="page page2 hide">
+            <div class="page-top"></div>
+            <div class="page-right page2-right"></div>
+            <div class="page-content">
+                <p class="page2-content-text page-content-text"><span class="font-number" id="user_name">王亦强</span></p>
+                <p class="page2-content-text page-content-text" id="department">你来自航行通告室</p>
+                <p class="page2-content-text page-content-text" id="info_change1">你一共出勤了<span class="font-number" id="att_day">224</span>天
+                </p>
+                <p class="page2-content-text page-content-text" id="info_change2">工作分值为<span class="font-number"
+                        id="point">1740</span>，超过了<span class="font-number" id="point_per">89.2%</span>的同事</p>
+            </div>
+            <div id="preload-02" class="cotent cotent2"></div>
+        </div>
+
+        <!-- 第三页 -->
+        <div class="page page3 hide">
+            <div class="page-top"></div>
+            <div class="page-right page3-right"></div>
+
+            <!-- 家的时间 -->
+            <img class="time-num home-hours-time-num" src="./images/num8.png" alt="">
+            <img class="time-num maohao-time-num" src="./images/numpoint.png" alt="">
+            <img class="time-num  home-minute-time-num" src="./images/num5.png" alt="">
+            <img class="time-num  home-second-time-num" src="./images/num9.png" alt="">
+            <!-- 公司的时间 -->
+            <img class="time-num company-hours-time-num1" src="./images/num2.png" alt="">
+            <img class="time-num company-hours-time-num2" src="./images/num3.png" alt="">
+            <img class="time-num maohao-company-time-num" src="./images/numpoint.png" alt="">
+            <img class="time-num  company-minute-time-num" src="./images/num5.png" alt="">
+            <img class="time-num  company-second-time-num" src="./images/num9.png" alt="">
+
+            <div class="page-content">
+                <p class="page3-content-text page-content-text" id="nav_text1"><span class="font-number"
+                        id="mostnot_month">12</span>月<span class="font-number" id="mostnot_day">17</span>日,</p>
+                <p class="page3-content-text page-content-text" id="nav_text2">大概是你最拼搏的一天</p>
+                <p class="page3-content-text page-content-text" id="nav_text3">这一天,</p>
+                <p class="page3-content-text page-content-text" id="nav_text4">你在公司处理了<span class="font-number"
+                        id="mostnot_num">477</span>条通告</p>
+                <p class="page3-content-text page-content-text">你的点滴付出，我们记在心里！</p>
+            </div>
+            <div id="preload-03" class="cotent"></div>
+        </div>
+
+        <!-- 第四页 -->
+
+        <!-- 经济园区/总部经济/工业地产 -->
+        <!-- <div class="page page4 hide">
+        <div class="page-top"></div>
+        <div class="page-right page2-right page4-right"></div>
+        <div class="page-content">
+            <p class="page4-content-text page-content-text page-content-text-bottom">一往无前，步月登云</p>
+            <p class="page4-content-text page-content-text page-content-text-height ">这一年，你跟进了<span class="font-number">5</span>个项目,共跟进<span class="font-number">2</span>次，项目见面<span class="font-number">5</span>次。</p>
+            <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom">在你的努力下，有<span class="font-number">5</span>个项目落地生根。</p>
+            <p class="page4-content-text page-content-text page-content-text-height">确认过眼神，</p>
+            <p class="page4-content-text page-content-text page-content-text-height">2019年你就是我们要pick的人！</p>
+        </div>
+        <div id="preload-04" class="cotent"></div>
+    </div> -->
+
+        <!-- 企业选址 -->
+        <!-- <div class="page page4 hide">
+        <div class="page-top"></div>
+        <div class="page-right page2-right page4-right"></div>
+        <div class="page-content">
+            <p class="page4-content-text page-content-text page-content-text-bottom">一往无前，步月登云</p>
+            <p class="page4-content-text page-content-text page-content-text-height ">这一年，你为企业调研了<span class="font-number">5</span>家园区，提供了<span class="font-number">6</span>次咨询服务。</p>
+            <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom">源于你的付出，<span class="font-number">10</span>家企业成功落地。</p>
+            <p class="page4-content-text page-content-text page-content-text-height">那一次得到企业认可后的喜悦，</p>
+            <p class="page4-content-text page-content-text page-content-text-height">你还记得吗？</p>
+        </div>
+        <div id="preload-04" class="cotent"></div>
+    </div> -->
+
+        <!-- 合作交流 -->
+        <!-- <div class="page page4 hide">
+        <div class="page-top"></div>
+        <div class="page-right page2-right page4-right"></div>
+        <div class="page-content">
+            <p class="page4-content-text page-content-text page-content-text-bottom">一往无前，步月登云</p>
+            <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom">这一年，你拓展了<span class="font-number">10</span>个单位，完成了<span class="font-number">3</span>次单位邀约。<span class="font-number">100</span>个小时，你都奔波在路上。</p>
+            <p class="page4-content-text page-content-text page-content-text-height">谈吐自如是一种风度，笑对群儒是一种境界。招商的广阔天地里，你将大有可为！</p>
+        </div>
+        <div id="preload-04" class="cotent"></div>
+    </div> -->
+
+        <!-- 财务 -->
+        <!-- <div class="page page4 hide">
+        <div class="page-top"></div>
+        <div class="page-right page2-right page4-right"></div>
+        <div class="page-content">
+            <p class="page4-content-text page-content-text page-content-text-bottom">持筹握算，利析秋毫。</p>
+            <p class="page4-content-text page-content-text page-content-text-height ">这一年，你进行了<span class="font-number">5</span>次财务审批，平均每天审批<span class="font-number">6</span>次。</p>
+            <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom">审批金额达<span class="font-number">100</span>元</p>
+            <p class="page4-content-text page-content-text page-content-text-height">因为了解，所以信赖！</p>
+        </div>
+        <div id="preload-05" class="cotent"></div>
+    </div> -->
+        <!-- 武清财务 -->
+        <!-- <div class="page page4 hide">
+        <div class="page-top"></div>
+        <div class="page-right page2-right page4-right"></div>
+        <div class="page-content">
+            <p class="page4-content-text page-content-text page-content-text-bottom">持筹握算，利析秋毫。</p>
+            <p class="page4-content-text page-content-text page-content-text-height ">这一年，新增客户<span class="font-number">229</span>家。</p>
+            <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom"><span class="font-number">79</span>%的客户非常满意你们的服务。</p>
+            <p class="page4-content-text page-content-text page-content-text-height">因为了解，所以信赖！</p>
+        </div>
+        <div id="preload-05" class="cotent"></div>
+    </div> -->
+        <!-- 网络运营 客服中心-->
+        <!-- <div class="page page4 hide">
+        <div class="page-top"></div>
+        <div class="page-right page2-right page4-right"></div>
+        <div class="page-content">
+            <p class="page4-content-text page-content-text page-content-text-bottom">忠于职守，精益求精。</p>
+            <p class="page4-content-text page-content-text page-content-text-height ">这一年，金牌客服团队接听了<span class="font-number">1000</span>通电话，通话时长<span class="font-number">10000</span>小时。</p>
+            <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom">录入了<span class="font-number">100000</span>个项目/载体。</p>
+            <p class="page4-content-text page-content-text page-content-text-height">勤思巧干苦攀，风逆我自昂扬！</p>
+        </div>
+        <div id="preload-08" class="cotent"></div>
+    </div> -->
+        <!-- 网络运营 研发中心-->
+        <!-- <div class="page page4 hide">
+        <div class="page-top"></div>
+        <div class="page-right page2-right page4-right"></div>
+        <div class="page-content">
+            <p class="page4-content-text page-content-text page-content-text-bottom">Hello，World</p>
+            <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom">这一年，天津研发中心发布了<span class="font-number">1000</span>个需求，解决了<span class="font-number">100000</span>个bug，设计了<span class="font-number">889</span>个页面。</p>
+            <p class="page4-content-text page-content-text page-content-text-height">谈笑间，需求尽在掌握；编码间，bug斩尽杀绝；设计间，灵感一触即发。</p>
+        </div>
+        <div id="preload-08" class="cotent"></div>
+    </div> -->
+        <!-- 网络运营 内容渠道产品-->
+        <!-- <div class="page page4 hide">
+        <div class="page-top"></div>
+        <div class="page-right page2-right page4-right"></div>
+        <div class="page-content">
+            <p class="page4-content-text page-content-text page-content-text-bottom">营销有道，妙笔生花。</p>
+            <p class="page4-content-text page-content-text page-content-text-height">这一年，你们为公司输送了<span class="font-number">1000</span>个项目，其中见面项目<span class="font-number">100</span>个。</p>
+            <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom">有<span class="font-number">10000</span>篇优秀的内容出自于你们之手。</p>
+            <p class="page4-content-text page-content-text page-content-text-height">你倾斜45度角伏案的姿势，有形而上学的气息。</p>
+        </div>
+        <div id="preload-08" class="cotent"></div>
+    </div> -->
+        <!-- 人力行政 -->
+        <!-- <div class="page page4 hide">
+        <div class="page-top"></div>
+        <div class="page-right page2-right page4-right"></div>
+        <div class="page-content">
+            <p class="page4-content-text page-content-text page-content-text-bottom">见微知著，明察秋毫。</p>
+            <p class="page4-content-text page-content-text page-content-text-height">这一年，你们帮助<span class="font-number">116</span>名新员工顺利入职。</p>
+            <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom">校招季，你们走遍<span class="font-number">20</span>个城市，<span class="font-number">73</span>所学校，<span class="font-number">84</span>场招聘会。</p>
+            <p class="page4-content-text page-content-text page-content-text-height">你尊重每一份简历，也尊重每一个追求梦想的人。</p>
+        </div>
+        <div id="preload-09" class="cotent"></div>
+    </div> -->
+        <!-- 培训 -->
+        <div class="page page4 hide">
+            <div class="page-top"></div>
+            <div class="page-right page2-right page4-right"></div>
+            <div class="page-content">
+                <p class="page4-content-text page-content-text page-content-text-bottom" id="info_change3">处理<span class="change_text">通告</span>，不分昼夜。</p>
+                <p class="page4-content-text page-content-text page-content-text-height" id="night_time">这一年，你值了<span
+                        class="font-number">34</span>个夜班，其中通宵班<span class="font-number">16</span>个，辛苦了！</p>
+                <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom" id="hide_text">
+                    全年共处理通告<span class="font-number" id="notam_cnt">21328</span>条，一级通告<span class="font-number"
+                        id="fircls_notam">2624</span> 条。</p>
+                <p class="page4-content-text page-content-text page-content-text-height" id="route_change"></p>
+            </div>
+            <div id="preload-09" class="cotent"></div>
+        </div>
+        <!-- 第五页 -->
+        <div class="page page5 hide">
+            <div class="page-top"></div>
+            <div class="page-content">
+                <p class="page4-content-text page-content-text page-content-text-height" id="night_time"><span
+                        class="font-number" id="pa_month">12</span>月<span class="font-number" id="pa_day">1</span>日，是你今年处理禁航最多的夜班。</p>
+                
+                <p class="page4-content-text page-content-text page-content-text-height">
+                    那天你处理了<span class="font-number" id="pa_num">45</span>条中英文西北禁航，快和小伙伴们比一比，谁是最黑的仔？</p>
+            </div>
+            <div id="preload-07" class="cotent"></div>
+        </div>
+
+        <!-- 第六页 -->
+        <div class="page page6 hide">
+            <div class="page-top"></div>
+            <div class="page-right page2-right"></div>
+            <!-- 面板 -->
+            <div class="bj_panel_end bj_panel_end3">
+                <img class="bj_end_bar" src="./images/bj_end_bar.png" alt="">
+                <!-- <div  class="bj_end_bar"></div> -->
+                <p class="title">选哪儿XX智能预测</p>
+                <p class="keyword">你的年度关键词</p>
+
+                <!-- ！注意  bj_panel_end1对应匹配keyword-text1-->
+                <!-- <p class="keyword-text keyword-text1">智多星</p> -->
+                <!-- <p class="keyword-text keyword-text2">幸运星</p> -->
+                <p class="keyword-text keyword-text3">北极星</p>
+                <!-- ！注意 智多星描述 -->
+                <!-- <p class="desc">足智多谋、敢想敢为的智多星，说的就是你了。2019，敢不敢接受火眼金睛的xx的挑战？比比谁更聪明！</p> -->
+                <!-- ！注意 幸运星描述 -->
+                <!-- <p class="desc">人人都羡慕你的好运气，但越努力，才能越幸运。2019，什么也别说了，跟着xx（猫头鹰的名字）走就对了！</p> -->
+                <!-- ！注意 北极星描述 -->
+                <p class="desc">北极星象征着坚定、执着和永远的守护。你散发出的星光，可以成为指引他人前进的导航。2019，xx（猫头鹰的名字）预测你将更加人气爆表，收获满满！</p>
+            </div>
+            <!-- 按钮 -->
+            <img class="bj_end_button bj_end_button1" src="./images/bj_end_button2.png" alt="">
+            <img class="bj_end_button bj_end_button2" src="./images/bj_end_button1.png" alt="">
+            <p class="inscription">运指中心航行情报部诚意出品</p>
+            <!-- logo -->
+            <!-- <div class="logo"></div> 没有logo，先删了--> 
+            <div id="preload-06" class="cotent"></div>
+        </div>
+    </div>
+
+    <div class="arrow">
+        <img src="./images/arrow.png" alt="">
+    </div>
+
+    <script src="https://res.wx.qq.com/open/js/jweixin-1.3.2.js"></script>
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/common.js"></script>
+    <script type="text/javascript">
+
+        document.addEventListener("touchmove", function (e) {
+            e.preventDefault();
+        }, { passive: false });
+        function yaoyao() {
+            wx.config({
+                // 配置信息, 即使不正确也能使用 wx.ready
+                debug: false,
+                appId: '',
+                timestamp: 1,
+                nonceStr: '',
+                signature: '',
+                jsApiList: []
+            });
+            wx.ready(function () {
+                document.getElementById('start').play();
+            });
+        }
+        window.onload = function () {
+            yaoyao();
+            document.getElementById('start').play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                document.getElementById('start').play();
+            }, false);
+        }
+
+
+
+        var curPage = 1;
+        var PageL = $('.page_box .page').length;
+        var canTouch = false;
+        canTouch = true;
+        var department; //科室
+
+        var startY, endY, diff;
+        document.body.addEventListener("touchstart", touchStart, { passive: false });
+        document.body.addEventListener("touchmove", touchMove, { passive: false });
+        document.body.addEventListener("touchend", touchEnd, { passive: false });
+        function touchStart(e) {
+            var touch = e.touches[0];
+            startY = touch.pageY;
+            document.getElementById('start').play();
+        }
+        function touchMove(e) {
+            //e.preventDefault();
+            var touch = e.touches[0];
+            endY = touch.pageY;
+            diff = endY - startY;
+
+        }
+        function touchEnd(e) {
+            if (Math.abs(diff) > 10 && canTouch) {
+                if (diff > 0) {
+                    if (curPage <= 1) {
+                        return;
+                    }
+
+                    $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('outDown');
+                    curPage--;
+                    if(curPage == 3 && department == "航行情报室") {
+                        curPage--;
+                    }
+                    if(curPage == 5 && department != "航行通告室") {
+                        curPage--;
+                    }
+                    $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('inDown');
+                    handleArrowShow();
+                } else {
+                    if (curPage >= PageL) {
+                        return;
+                    }
+
+                    $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('outTop');
+                    curPage++;
+                    if(curPage == 3 && department == "航行情报室") {
+                        curPage++;
+                    }
+                    if(curPage == 5 && department != "航行通告室") {
+                        curPage++;
+                    }
+                    $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('inTop');
+                    handleArrowShow();
+                }
+                canTouch = false;
+                setTimeout(function () {
+                    canTouch = true;
+                    diff = 0;
+                    $('.page' + (curPage - 1) + ', .page' + (curPage + 1)).addClass('hide');
+                }, 1000);
+            }
+        }
+        //处理向上箭头显示隐藏
+        function handleArrowShow() {
+            if (curPage >= PageL) {
+                $('.arrow').hide();
+            } else {
+                $('.arrow').show();
+            }
+        }
+        //图片预加载
+        function preloader() {
+            if (document.getElementById) {
+                document.getElementById("preload-01").style.background = "url(./images/bj_08.jpg) no-repeat";
+                document.getElementById("preload-02").style.background = "url(./images/bj_02.jpg) no-repeat";
+                document.getElementById("preload-03").style.background = "url(./images/bj_03.jpg) no-repeat";
+                document.getElementById("preload-07").style.background = "url(./images/bj_04.jpg) no-repeat";
+                if (document.getElementById("preload-04")) {
+                    document.getElementById("preload-04").style.background = "url(./images/bj_04.jpg) no-repeat";
+                }
+                if (document.getElementById("preload-05")) {
+                    document.getElementById("preload-05").style.background = "url(./images/bj_05.jpg) no-repeat";
+                }
+                if (document.getElementById("preload-08")) {
+                    document.getElementById("preload-08").style.background = "url(./images/bj_08.jpg) no-repeat";
+                }
+                if (document.getElementById("preload-09")) {
+                    document.getElementById("preload-09").style.background = "url(./images/bj_09.jpg) no-repeat";
+                }
+                document.getElementById("preload-06").style.background = "url(./images/bj_end.jpg) no-repeat";
+            }
+        }
+        function addLoadEvent(func) {
+            var oldonload = window.onload;
+            if (typeof window.onload != 'function') {
+                window.onload = func;
+
+            } else {
+                window.onload = function () {
+
+                    if (oldonload) {
+                        oldonload();
+                    }
+                    func();
+
+                }
+            }
+        }
+
+        addLoadEvent(preloader);
+
+        function isIphoneX() {
+            return /iphone/gi.test(navigator.userAgent) && (screen.height == 812 && screen.width == 375)
+        }
+
+        console.log(isIphoneX())
+        //再看一遍
+        $('.bj_end_button1').click(function () {
+            window.location.reload();
+        })
+
+
+        function toPercent(point) {
+            var str = Number(point * 100).toFixed(1);
+            str += "%";
+            return str;
+        }
+
+        $(function () {
+            $("#btn_sub").click(function () {
+                // console.log("运行到这了吗")
+                $.getJSON("json/notam.json", function (data) {
+                    var user_id = $("#user_id").val();
+                    var user_name; //姓名
+                    var point; //工作分值
+                    var point_per; //工作分值比例
+                    var att_day; //出勤天数
+                    var night_day; //夜班天数
+                    var overnight_day; //通宵天数
+                    var notam_cnt; //通告处理量
+                    var fircls_notam; //一级通告数量
+                    var pa_notam; //禁航数量
+                    var mostnot_time; //处理通告最多的日子
+                    var mostnot_num; //处理通告最多的日子的数量
+
+                    //存储数据的变量 
+                    // $jsontip.empty();
+                    //清空内容 
+                    $.each(data, function (infoIndex, info) {
+                        if (info["员工号"] == user_id) {
+                            // user_name = info["姓名"]
+                            // point = info["工作分值"]
+                            // point_per = info["工作分值比例"]
+                            // att_day = info["出勤天数"]
+                            // night_day = info["夜班数"]
+                            // overnight_day = info["通宵"]
+                            // notam_cnt = info["通告处理量"]
+                            // fircls_notam = info["一级通告（机场跑道关闭、空域关闭）"]
+                            // pa_notam = info["最黑的仔（夜班遇到禁航通告数量）"]
+                            // mostnot_month = info["处理通告最多的月份"]
+                            // mostnot_day = info["处理通告最多的日期"]
+                            // mostnot_num = info["处理通告最多的数量"]
+                            department = info["科室"]
+                            $("#user_name").text(info["姓名"])
+                            $("#department").text("你来自" + department)
+                            if (department == "航行通告室") {
+                                $("#point").text(info["工作分值"])
+                                $("#point_per").text(toPercent(info["工作分值比例"]))
+                                $("#att_day").text(info["出勤天数"])
+                                $("#night_time").html('这一年，你值了<span class="font-number">'+ info["夜班数"] 
+                                    +'</span>个夜班，其中通宵班<span class="font-number">'+ info["通宵"] 
+                                    +'</span>个，辛苦了！')
+                                $("#notam_cnt").text(info["通告处理量"])
+                                $("#fircls_notam").text(info["一级通告（机场跑道关闭、空域关闭）"])
+                                $("#pa_month").text(info["最黑的月（夜班遇到西北禁航通告最多的月）"])
+                                $("#pa_day").text(info["最黑的日子（夜班遇到西北禁航通告最多的一天）"])
+                                $("#pa_num").text(info["最黑的仔（夜班遇到西北禁航通告最多的数目）"])
+                                $("#mostnot_month").text(info["处理通告最多的月份"])
+                                $("#mostnot_day").text(info["处理通告最多的日期"])
+                                $("#mostnot_num").text(info["处理通告最多的数量"])
+                            }
+                            if (department == "导航数据室") {
+                                $("#point").text(info["工时"])
+                                $("#point_per").text(toPercent(info["工时比例"]))
+                                $("#att_day").text(info["出勤天数"])
+                                $("#nav_text1").text("这一年，你和科室的同事们勤勤恳恳，")
+                                $("#nav_text2").html('人均规划了<span class="font-number">'+ info["人均规划航路（条）"] +'</span>条航路')
+                                $("#nav_text3").html('人均维护了<span class="font-number">'+ info["人均维护LIDO/机载公司航路（条）"] +'</span>条LIDO/机载公司航路')
+                                $("#nav_text4").html('人均创造价值<span class="font-number">'+ info["人均价值创造（万元）"] +'</span>万元')
+                                $(".change_text").text("改航")
+                                $("#hide_text").html("")
+                                $("#night_time").html('这一年，你值了<span class="font-number">'+ info["白班"] 
+                                    +'</span>个白班，<span class="font-number">'+ info["夜班"] 
+                                    +'</span>个夜班，辛苦了！')
+                                $("#route_change").html('在你和小伙伴的共同努力下，人均处理<span class="font-number">'+ info["人均改航数量（条）"]+'</span>条改航。')
+                            }
+                            if (department == "航行情报室") {
+                                $("#info_change1").html('<span class="font-number">250</span>个工作日里')
+                                $("#info_change2").html('你修订了<span class="font-number">' + info["总数"] + '</span>条AIP，其中三星以上的有<span class="font-number">' + info["三星以上"] 
+                                    + '</span>条')
+                                $("#info_change3").html('今年，你修订了<span class="font-number">'+info["处理最多的数量"]+'</span>条<span class="font-number">'+info["处理最多的国家"]+'</span>的AIP')
+                                $("#night_time").html('是你处理最多的国家/地区')
+                                $("#hide_text").html('')
+                            }
+                        }
+                    })
+                    // alert(user_name)
+                    //显示处理后的数据 
+                })
+            })
+        })
+
+    </script>
+</body>
+
+</html>
