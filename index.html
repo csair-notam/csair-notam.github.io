@@ -58,7 +58,8 @@
             <div class="page-content">
                 <p class="page2-content-text page-content-text"><span class="font-number" id="user_name">王亦强</span></p>
                 <p class="page2-content-text page-content-text" id="department">你来自航行通告室</p>
-                <p class="page2-content-text page-content-text" id="info_change1">你一共出勤了<span class="font-number" id="att_day">224</span>天
+                <p class="page2-content-text page-content-text" id="info_change1">你一共出勤了<span class="font-number"
+                        id="att_day">224</span>天
                 </p>
                 <p class="page2-content-text page-content-text" id="info_change2">工作分值为<span class="font-number"
                         id="point">1740</span>，超过了<span class="font-number" id="point_per">89.2%</span>的同事</p>
@@ -213,10 +214,12 @@
             <div class="page-top"></div>
             <div class="page-right page2-right page4-right"></div>
             <div class="page-content">
-                <p class="page4-content-text page-content-text page-content-text-bottom" id="info_change3">处理<span class="change_text">通告</span>，不分昼夜。</p>
+                <p class="page4-content-text page-content-text page-content-text-bottom" id="info_change3">处理<span
+                        class="change_text">通告</span>，不分昼夜。</p>
                 <p class="page4-content-text page-content-text page-content-text-height" id="night_time">这一年，你值了<span
                         class="font-number">34</span>个夜班，其中通宵班<span class="font-number">16</span>个，辛苦了！</p>
-                <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom" id="hide_text">
+                <p class="page4-content-text page-content-text page-content-text-height page-content-text-bottom"
+                    id="hide_text">
                     全年共处理通告<span class="font-number" id="notam_cnt">21328</span>条，一级通告<span class="font-number"
                         id="fircls_notam">2624</span> 条。</p>
                 <p class="page4-content-text page-content-text page-content-text-height" id="route_change"></p>
@@ -228,8 +231,9 @@
             <div class="page-top"></div>
             <div class="page-content">
                 <p class="page4-content-text page-content-text page-content-text-height" id="night_time"><span
-                        class="font-number" id="pa_month">12</span>月<span class="font-number" id="pa_day">1</span>日，是你今年处理禁航最多的夜班。</p>
-                
+                        class="font-number" id="pa_month">12</span>月<span class="font-number"
+                        id="pa_day">1</span>日，是你今年处理禁航最多的夜班。</p>
+
                 <p class="page4-content-text page-content-text page-content-text-height">
                     那天你处理了<span class="font-number" id="pa_num">45</span>条中英文西北禁航，快和小伙伴们比一比，谁是最黑的仔？</p>
             </div>
@@ -244,8 +248,8 @@
             <div class="bj_panel_end bj_panel_end3">
                 <img class="bj_end_bar" src="./images/bj_end_bar.png" alt="">
                 <!-- <div  class="bj_end_bar"></div> -->
-                <p class="title">选哪儿XX智能预测</p>
-                <p class="keyword">你的年度关键词</p>
+                <p class="title">智慧情报，与你共建</p>
+                <p class="keyword">部门年度关键词</p>
 
                 <!-- ！注意  bj_panel_end1对应匹配keyword-text1-->
                 <!-- <p class="keyword-text keyword-text1">智多星</p> -->
@@ -256,14 +260,14 @@
                 <!-- ！注意 幸运星描述 -->
                 <!-- <p class="desc">人人都羡慕你的好运气，但越努力，才能越幸运。2019，什么也别说了，跟着xx（猫头鹰的名字）走就对了！</p> -->
                 <!-- ！注意 北极星描述 -->
-                <p class="desc">北极星象征着坚定、执着和永远的守护。你散发出的星光，可以成为指引他人前进的导航。2019，xx（猫头鹰的名字）预测你将更加人气爆表，收获满满！</p>
+                <p class="desc">北极星象征着坚定、执着和永远的守护。你散发出的星光，可以成为指引他人前进的导航。2019，祝你更加人气爆表，收获满满！</p>
             </div>
             <!-- 按钮 -->
             <img class="bj_end_button bj_end_button1" src="./images/bj_end_button2.png" alt="">
             <img class="bj_end_button bj_end_button2" src="./images/bj_end_button1.png" alt="">
             <p class="inscription">运指中心航行情报部诚意出品</p>
             <!-- logo -->
-            <!-- <div class="logo"></div> 没有logo，先删了--> 
+            <!-- <div class="logo"></div> 没有logo，先删了-->
             <div id="preload-06" class="cotent"></div>
         </div>
     </div>
@@ -276,7 +280,7 @@
     <script type="text/javascript" src="./js/jquery.js"></script>
     <script type="text/javascript" src="./js/common.js"></script>
     <script type="text/javascript">
-
+        $('.arrow').hide();
         document.addEventListener("touchmove", function (e) {
             e.preventDefault();
         }, { passive: false });
@@ -335,10 +339,13 @@
 
                     $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('outDown');
                     curPage--;
-                    if(curPage == 3 && department == "航行情报室") {
+                    if (curPage == 0) {
+                        curPage++;
+                    }
+                    if (curPage == 3 && department == "航行情报室") {
                         curPage--;
                     }
-                    if(curPage == 5 && department != "航行通告室") {
+                    if (curPage == 5 && department != "航行通告室") {
                         curPage--;
                     }
                     $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('inDown');
@@ -347,17 +354,18 @@
                     if (curPage >= PageL) {
                         return;
                     }
-
-                    $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('outTop');
-                    curPage++;
-                    if(curPage == 3 && department == "航行情报室") {
+                    if (curPage != 1) {
+                        $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('outTop');
                         curPage++;
+                        if (curPage == 3 && department == "航行情报室") {
+                            curPage++;
+                        }
+                        if (curPage == 5 && department != "航行通告室") {
+                            curPage++;
+                        }
+                        $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('inTop');
+                        handleArrowShow();
                     }
-                    if(curPage == 5 && department != "航行通告室") {
-                        curPage++;
-                    }
-                    $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('inTop');
-                    handleArrowShow();
                 }
                 canTouch = false;
                 setTimeout(function () {
@@ -369,7 +377,7 @@
         }
         //处理向上箭头显示隐藏
         function handleArrowShow() {
-            if (curPage >= PageL) {
+            if (curPage >= PageL || curPage == 1) {
                 $('.arrow').hide();
             } else {
                 $('.arrow').show();
@@ -474,9 +482,9 @@
                                 $("#point").text(info["工作分值"])
                                 $("#point_per").text(toPercent(info["工作分值比例"]))
                                 $("#att_day").text(info["出勤天数"])
-                                $("#night_time").html('这一年，你值了<span class="font-number">'+ info["夜班数"] 
-                                    +'</span>个夜班，其中通宵班<span class="font-number">'+ info["通宵"] 
-                                    +'</span>个，辛苦了！')
+                                $("#night_time").html('这一年，你值了<span class="font-number">' + info["夜班数"]
+                                    + '</span>个夜班，其中通宵班<span class="font-number">' + info["通宵"]
+                                    + '</span>个，辛苦了！')
                                 $("#notam_cnt").text(info["通告处理量"])
                                 $("#fircls_notam").text(info["一级通告（机场跑道关闭、空域关闭）"])
                                 $("#pa_month").text(info["最黑的月（夜班遇到西北禁航通告最多的月）"])
@@ -491,29 +499,33 @@
                                 $("#point_per").text(toPercent(info["工时比例"]))
                                 $("#att_day").text(info["出勤天数"])
                                 $("#nav_text1").text("这一年，你和科室的同事们勤勤恳恳，")
-                                $("#nav_text2").html('人均规划了<span class="font-number">'+ info["人均规划航路（条）"] +'</span>条航路')
-                                $("#nav_text3").html('人均维护了<span class="font-number">'+ info["人均维护LIDO/机载公司航路（条）"] +'</span>条LIDO/机载公司航路')
-                                $("#nav_text4").html('人均创造价值<span class="font-number">'+ info["人均价值创造（万元）"] +'</span>万元')
+                                $("#nav_text2").html('人均规划了<span class="font-number">' + info["人均规划航路（条）"] + '</span>条航路')
+                                $("#nav_text3").html('人均维护了<span class="font-number">' + info["人均维护LIDO/机载公司航路（条）"] + '</span>条LIDO/机载公司航路')
+                                $("#nav_text4").html('人均创造价值<span class="font-number">' + info["人均价值创造（万元）"] + '</span>万元')
                                 $(".change_text").text("改航")
                                 $("#hide_text").html("")
-                                $("#night_time").html('这一年，你值了<span class="font-number">'+ info["白班"] 
-                                    +'</span>个白班，<span class="font-number">'+ info["夜班"] 
-                                    +'</span>个夜班，辛苦了！')
-                                $("#route_change").html('在你和小伙伴的共同努力下，人均处理<span class="font-number">'+ info["人均改航数量（条）"]+'</span>条改航。')
+                                $("#night_time").html('这一年，你值了<span class="font-number">' + info["白班"]
+                                    + '</span>个白班，<span class="font-number">' + info["夜班"]
+                                    + '</span>个夜班，辛苦了！')
+                                $("#route_change").html('在你和小伙伴的共同努力下，人均处理<span class="font-number">' + info["人均改航数量（条）"] + '</span>条改航。')
                             }
                             if (department == "航行情报室") {
                                 $("#info_change1").html('<span class="font-number">250</span>个工作日里')
-                                $("#info_change2").html('你修订了<span class="font-number">' + info["总数"] + '</span>条AIP，其中三星以上的有<span class="font-number">' + info["三星以上"] 
+                                $("#info_change2").html('你修订了<span class="font-number">' + info["总数"] + '</span>条AIP，其中三星以上的有<span class="font-number">' + info["三星以上"]
                                     + '</span>条')
-                                $("#info_change3").html('今年，你修订了<span class="font-number">'+info["处理最多的数量"]+'</span>条<span class="font-number">'+info["处理最多的国家"]+'</span>的AIP')
+                                $("#info_change3").html('今年，你修订了<span class="font-number">' + info["处理最多的数量"] + '</span>条<span class="font-number">' + info["处理最多的国家"] + '</span>的AIP')
                                 $("#night_time").html('是你处理最多的国家/地区')
-                                $("#hide_text").html('')
+                                $("#hide_text").html('处理邮件也辛苦了，<span class="font-number">' + info["邮件处理"] + '</span>封邮件，仿佛能看到你努力的身影')
                             }
                         }
                     })
                     // alert(user_name)
                     //显示处理后的数据 
                 })
+                $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('outTop');
+                curPage++;
+                $('.page' + curPage).removeClass('inTop outTop inDown outDown hide').addClass('inTop');
+                handleArrowShow();
             })
         })
 
