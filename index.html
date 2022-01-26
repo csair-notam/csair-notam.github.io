@@ -254,13 +254,13 @@
                 <!-- ！注意  bj_panel_end1对应匹配keyword-text1-->
                 <!-- <p class="keyword-text keyword-text1">智多星</p> -->
                 <!-- <p class="keyword-text keyword-text2">幸运星</p> -->
-                <p class="keyword-text keyword-text3">北极星</p>
+                <p class="keyword-text keyword-text3" id="keyword">与君共勉</p>
                 <!-- ！注意 智多星描述 -->
                 <!-- <p class="desc">足智多谋、敢想敢为的智多星，说的就是你了。2019，敢不敢接受火眼金睛的xx的挑战？比比谁更聪明！</p> -->
                 <!-- ！注意 幸运星描述 -->
                 <!-- <p class="desc">人人都羡慕你的好运气，但越努力，才能越幸运。2019，什么也别说了，跟着xx（猫头鹰的名字）走就对了！</p> -->
                 <!-- ！注意 北极星描述 -->
-                <p class="desc">北极星象征着坚定、执着和永远的守护。你散发出的星光，可以成为指引他人前进的导航。2019，祝你更加人气爆表，收获满满！</p>
+                <p class="desc" id="desc">2021完美收官，2022情报有你！</p>
             </div>
             <!-- 按钮 -->
             <img class="bj_end_button bj_end_button1" src="./images/bj_end_button2.png" alt="">
@@ -504,7 +504,7 @@
                                 $("#nav_text4").html('人均创造价值<span class="font-number">' + info["人均价值创造（万元）"] + '</span>万元')
                                 $(".change_text").text("改航")
                                 $("#hide_text").html("")
-                                $("#night_time").html('这一年，你值了<span class="font-number">' + info["白班"]
+                                $("#night_time").html('这一年，你在导航位值了<span class="font-number">' + info["白班"]
                                     + '</span>个白班，<span class="font-number">' + info["夜班"]
                                     + '</span>个夜班，辛苦了！')
                                 $("#route_change").html('在你和小伙伴的共同努力下，人均处理<span class="font-number">' + info["人均改航数量（条）"] + '</span>条改航。')
@@ -517,6 +517,22 @@
                                 $("#night_time").html('是你处理最多的国家/地区')
                                 $("#hide_text").html('处理邮件也辛苦了，<span class="font-number">' + info["邮件处理"] + '</span>封邮件，仿佛能看到你努力的身影')
                             }
+                        }
+                        if (user_id == 218750 || user_id == 264694) {
+                            $("#keyword").text("最长的夜")
+                            $("#desc").text("2021年，科室就属你夜班最多，2022继续加油！")
+                        }
+                        if (user_id == 276392) {
+                            $("#keyword").text("最黑的仔")
+                            $("#desc").text("短短一个晚上，处理了那么多中英文禁航，会不会有点手忙脚乱呢？")
+                        }
+                        if (user_id == 276396) {
+                            $("#keyword").text("手速第一")
+                            $("#desc").text("科室最快的手非你莫属！")
+                        }
+                        if (user_id ==207803) {
+                            $("#keyword").text("最强大脑")
+                            $("#desc").text("全球的AIP都被你轻松玩转啦！快歇一歇吧！")
                         }
                     })
                     // alert(user_name)
